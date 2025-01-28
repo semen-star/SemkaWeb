@@ -45,28 +45,41 @@ body {
     transform: scale(1.1);
 }
 
-.fullscreen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+.blocks {
     display: flex;
     justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.block {
+    background: rgba(173, 216, 230, 0.8);
+    border: 2px solid #87ceeb;
+    border-radius: 10px;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    z-index: 1000;
-    display: none;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.fullscreen img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 8px;
+.block:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.fullscreen.close {
-    cursor: pointer;
+.block .description {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    text-align: center;
+    color: #555;
 }
 
 @keyframes fadeIn {

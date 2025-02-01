@@ -1,0 +1,82 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.home-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.contact-btn {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+}
+
+.whatsapp { background-color: #25D366; }
+.vk { background-color: #4C75A3; }
+.telegram { background-color: #0088cc; }
+
+.email-phones h2 {
+    color: #333;
+}
+
+.email-phones ul {
+    list-style: none;
+    padding: 0;
+}
+
+.email-phones li {
+    margin: 5px 0;
+}
+
+.email-phones a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.email-phones a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+}

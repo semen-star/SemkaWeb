@@ -43,8 +43,8 @@
 ## Контакты
 
 Если у вас есть вопросы или предложения, свяжитесь со мной:
-- Email: your-email@example.com
-- Социальные сети: [ВКонтакте](https://vk.com/semyonka_magnitka), [Telegram](https://t.me/AHAPXlCT)
+- Email: ss0215292@icloud.com
+- Социальные сети: [ВКонтакте](https://vk.com/semyonka_magnitka), [Telegram](https://t.me/SemyonkaStarikov)
 
 ---
 

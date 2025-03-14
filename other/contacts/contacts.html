@@ -31,6 +31,24 @@
             <h2>Телефон</h2>
             <p><a href="tel:+79090954883">+7 (909) 095-48-83</a></p>
         </section>
+
+        <form id="tgForm">
+    <textarea id="message" placeholder="Введите сообщение"></textarea>
+    <button type="submit">Отправить</button>
+</form>
+
+<script>
+    document.getElementById("tgForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        var msg = document.getElementById("message").value;
+        fetch("https://script.google.com/macros/s/AKfycbzCFe9AU6VXx7uUkKh3qGwu9u7JFlZDBY2f9nng-0MgP4uUtPAGfAQRLo-B7Gi9xjmz/exec", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: "text=" + encodeURIComponent(msg)
+        }).then(() => alert("Сообщение отправлено!"));
+    });
+</script>
+
     </main>
     
     <footer>

@@ -1,82 +1,45 @@
-/* styles.css */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    background: radial-gradient(circle, rgb(50, 50, 150), rgb(0, 0, 50));
+    transition: background 0.2s ease-in-out;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    color: white;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .home-btn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    font-size: 24px;
     background: none;
     border: none;
-    font-size: 24px;
-    cursor: pointer;
     color: white;
-}
-
-h1 {
-    margin: 0;
+    cursor: pointer;
 }
 
 main {
-    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-.social-links {
-    margin: 20px 0;
-}
-
-.contact-btn {
-    display: block;
-    width: 200px;
-    margin: 10px auto;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    color: white;
-    border-radius: 5px;
-}
-
-.whatsapp { background-color: #25D366; }
-.vk { background-color: #4C75A3; }
-.telegram { background-color: #0088cc; }
-
-.email-phones h2 {
-    color: #333;
-}
-
-.email-phones ul {
-    list-style: none;
-    padding: 0;
-}
-
-.email-phones li {
-    margin: 5px 0;
-}
-
-.email-phones a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.email-phones a:hover {
-    text-decoration: underline;
+audio {
+    margin: 15px 0;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    margin-top: 20px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
 }

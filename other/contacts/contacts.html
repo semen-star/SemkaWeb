@@ -33,22 +33,26 @@
         </section>
 
         <form id="tgForm">
-    <textarea id="message" placeholder="Введите сообщение"></textarea>
-    <button type="submit">Отправить</button>
-</form>
-
-<script>
-    document.getElementById("tgForm").addEventListener("submit", function(e) {
-        e.preventDefault();
-        var msg = document.getElementById("message").value;
-        fetch("https://script.google.com/macros/s/AKfycbzCFe9AU6VXx7uUkKh3qGwu9u7JFlZDBY2f9nng-0MgP4uUtPAGfAQRLo-B7Gi9xjmz/exec", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: "text=" + encodeURIComponent(msg)
-        }).then(() => alert("Сообщение отправлено!"));
-    });
-</script>
-
+            <input type="text" placeholder="Напишите анонимное сообщение..." name="text" class="input">
+            <button class="button">
+                <svg viewBox="0 0 16 16" class="bi bi-lightning-charge-fill" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"></path>
+                </svg>
+                Отправить анонимное сообщение
+            </button>
+        </form>
+        
+        <script>
+            document.getElementById("tgForm").addEventListener("submit", function(e) {
+                e.preventDefault();
+                var msg = document.querySelector(".input").value;
+                fetch("https://script.google.com/macros/s/AKfycbzCFe9AU6VXx7uUkKh3qGwu9u7JFlZDBY2f9nng-0MgP4uUtPAGfAQRLo-B7Gi9xjmz/exec", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: "text=" + encodeURIComponent(msg)
+                }).then(() => alert("Сообщение отправлено!"));
+            });
+        </script>
     </main>
     
     <footer>

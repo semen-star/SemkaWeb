@@ -13,6 +13,65 @@
     </header>
     
     <main>
+        <section class="greeting">
+  <h2>Вика, поздравляю!</h2>
+  <p>Ты справилась! Русский, история, математика — всё позади. Теперь — только лето, свобода, и пусть всё будет именно так, как ты мечтаешь.</p>
+</section>
+
+    <section class="thoughts">
+  <h2>Пара слов...</h2>
+  <p>Мы знакомы не так давно — занятия по русскому, редкие переписки в Telegram, случайная поездка 9 мая... Но даже за это короткое время я понял: у тебя не только красивая внешность, но и очень добрый, честный характер. Ты умеешь быть справедливой, смешной, и просто... настоящей.</p>
+
+  <p>Возможно, ты замечала намёки. Может быть — даже улыбалась с тех самых стикеров, песен и коротких видео. Всё это — правда. Это был мой способ намекнуть, что ты мне нравишься.</p>
+</section>
+
+    <section class="media">
+  <h2>Самый жирный намёк</h2>
+  <p>Когда-то(19.05.2025), я отправил тебе видео, в котором показал на себя в момент слов "А тот кто влюблён безрассудно, тот и поёт". И потом сказал тебе мол песни описывают мою жизнь)))</p>
+
+  <div class="gallery">
+    <video controls preload="metadata" style="height: 400px; width: auto; border-radius: 12px; display: block; margin: 0 auto;">
+      <source src="video.mp4" type="video/mp4">
+      Твоё устройство не поддерживает воспроизведение видео.
+    </video>
+    <img src="chat-screenshot.png" alt="Фрагмент переписки" />
+  </div>
+</section>
+
+
+    <section class="contact">
+  <h2>Хочешь узнать меня получше?</h2>
+  <p>Я не пишу здесь о любви или отношениях. Я просто говорю честно — ты мне интересна. И если ты хочешь узнать меня ближе, просто нажми на кнопку.</p>
+
+ <section class="social-links">
+            <button class="contact-btn telegram" onclick="window.location.href='https://t.me/SemyonkaStarikov'">Telegram</button>
+        </section>
+
+  <p>Или можешь отправить сообщение прямо отсюда, с сайта:</p>
+  <form id="tgForm">
+            <input type="text" placeholder="Напиши сообщение..." name="text" class="input">
+            <button class="button">
+                <svg viewBox="0 0 16 16" class="bi bi-lightning-charge-fill" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"></path>
+                </svg>
+                Отправить сообщение
+            </button>
+        </form>
+        
+        <script>
+            document.getElementById("tgForm").addEventListener("submit", function(e) {
+                e.preventDefault();
+                var msg = document.querySelector(".input").value;
+                fetch("https://script.google.com/macros/s/AKfycbzCFe9AU6VXx7uUkKh3qGwu9u7JFlZDBY2f9nng-0MgP4uUtPAGfAQRLo-B7Gi9xjmz/exec", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: "text=" + encodeURIComponent(msg)
+                }).then(() => alert("Сообщение отправлено!"));
+            });
+        </script>
+</section>
+
+
        
     </main>
     

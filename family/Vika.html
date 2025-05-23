@@ -42,37 +42,9 @@
     <section class="contact">
   <h2>Хочешь узнать меня получше?</h2>
   <p>Я не пишу здесь о любви или отношениях. Я просто говорю честно — ты мне интересна. И если ты хочешь узнать меня ближе, просто нажми на кнопку.</p>
-
- <section class="social-links">
-            <button class="contact-btn telegram" onclick="window.location.href='https://t.me/SemyonkaStarikov'">Telegram</button>
-        </section>
-
-  <p>Или можешь отправить сообщение прямо отсюда, с сайта:</p>
-  <form id="tgForm">
-            <input type="text" placeholder="Напиши сообщение..." name="text" class="input">
-            <button class="button">
-                <svg viewBox="0 0 16 16" class="bi bi-lightning-charge-fill" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"></path>
-                </svg>
-                Отправить сообщение
-            </button>
-        </form>
-        
-        <script>
-            document.getElementById("tgForm").addEventListener("submit", function(e) {
-                e.preventDefault();
-                var msg = document.querySelector(".input").value;
-                fetch("https://script.google.com/macros/s/AKfycbzCFe9AU6VXx7uUkKh3qGwu9u7JFlZDBY2f9nng-0MgP4uUtPAGfAQRLo-B7Gi9xjmz/exec", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                    body: "text=" + encodeURIComponent(msg)
-                }).then(() => alert("Сообщение отправлено!"));
-            });
-        </script>
-</section>
-
-
-       
+  <button class="glow-on-hover" type="button" onclick="window.location.href='Vikadopy.html'">Да, можно попробовать</button>
+  <button class="glow-on-hover" type="button" onclick="window.location.href='Vikadopn.html'">Нет, не стоит</button>
+    </section>
     </main>
     
     <footer>

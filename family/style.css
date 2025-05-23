@@ -1,37 +1,21 @@
-/* styles.css */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    background: radial-gradient(circle, rgb(50, 50, 150), rgb(0, 0, 50));
+    transition: background 0.2s ease-in-out;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    color: white;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
 }
-
-.home-btn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-}
-
-h1 {
-    margin: 0;
-}
-
-main {
-    padding: 20px;
-}
-
 /* From Uiverse.io by milegelu */ 
 .input {
     border-radius: 10px;
@@ -127,93 +111,29 @@ main {
 .whatsapp { background-color: #25D366; }
 .vk { background-color: #4C75A3; }
 .telegram { background-color: #0088cc; }
-
-.email-phones h2 {
-    color: #333;
+.home-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
-.email-phones ul {
-    list-style: none;
-    padding: 0;
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-.email-phones li {
-    margin: 5px 0;
-}
-
-.email-phones a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.email-phones a:hover {
-    text-decoration: underline;
+audio {
+    margin: 15px 0;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-
-
-.glow-on-hover {
-    width: 220px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #111;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-}
-
-.glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-}
-
-.glow-on-hover:active {
-    color: #000
-}
-
-.glow-on-hover:active:after {
-    background: transparent;
-}
-
-.glow-on-hover:hover:before {
-    opacity: 1;
-}
-
-.glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
     width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-}
-
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
 }

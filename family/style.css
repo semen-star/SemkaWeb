@@ -1,139 +1,113 @@
-body {
-    background: radial-gradient(circle, rgb(50, 50, 150), rgb(0, 0, 50));
-    transition: background 0.2s ease-in-out;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    color: white;
+/* Убираем отступы и настраиваем шрифт */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  background: black;
+  color: white;
 }
 
-header {
-    width: 100%;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-}
-/* From Uiverse.io by milegelu */ 
-.input {
-    border-radius: 10px;
-    outline: 2px solid #FEBF00;
-    border: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #e2e2e2;
-    outline-offset: 3px;
-    padding: 10px 1rem;
-    transition: 0.25s;
-    font-size: 16px;
-    width: 80%;
-    max-width: 400px;
+/* Фоновый canvas */
+#matrix-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
-.input:focus {
-    outline-offset: 5px;
-    background-color: #fff;
-}
-
-.button {
-  --bezier: cubic-bezier(0.22, 0.61, 0.36, 1);
-  --edge-light: hsla(0, 0%, 50%, 0.8);
-  --text-light: rgba(255, 255, 255, 0.4);
-  --back-color: 240, 40%;
-
-  cursor: pointer;
-  padding: 0.7em 1em;
-  border-radius: 0.5em;
-  min-height: 2.4em;
-  min-width: 3em;
+/* Основной контент */
+.content {
+  position: relative;
+  z-index: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.5em;
-  
-  font-size: 18px;
-  letter-spacing: 0.05em;
-  line-height: 1;
-  font-weight: bold;
-
-  background: linear-gradient(
-    140deg,
-    hsla(var(--back-color), 50%, 1) min(2em, 20%),
-    hsla(var(--back-color), 50%, 0.6) min(8em, 100%)
-  );
-  color: hsla(0, 0%, 90%);
-  border: 0;
-  box-shadow: inset 0.4px 1px 4px var(--edge-light);
-
-  transition: all 0.1s var(--bezier);
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
 }
 
-.button:hover {
-  --edge-light: hsla(0, 0%, 50%, 1);
-  text-shadow: 0px 0px 10px var(--text-light);
-  box-shadow: inset 0.4px 1px 4px var(--edge-light),
-    2px 4px 8px hsla(0, 0%, 0%, 0.295);
-  transform: scale(1.1);
+/* Заголовок */
+.title {
+  font-size: 3rem;
+  color: #ff69b4; /* розовый */
+  margin-bottom: 2rem;
 }
 
-.button:active {
-  --text-light: rgba(255, 255, 255, 1);
-
-  background: linear-gradient(
-    140deg,
-    hsla(var(--back-color), 50%, 1) min(2em, 20%),
-    hsla(var(--back-color), 50%, 0.6) min(8em, 100%)
-  );
-  box-shadow: inset 0.4px 1px 8px var(--edge-light),
-    0px 0px 8px hsla(var(--back-color), 50%, 0.6);
-  text-shadow: 0px 0px 20px var(--text-light);
-  color: hsla(0, 0%, 100%, 1);
-  letter-spacing: 0.1em;
-  transform: scale(1);
+/* Кнопка */
+.love-button {
+  background-color: #ff69b4;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 2rem;
+}
+.love-button:hover {
+  background-color: #e055a4;
 }
 
-.social-links {
-    margin: 20px 0;
+/* Форма */
+.message-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.contact-btn {
-    display: block;
-    width: 200px;
-    margin: 10px auto;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    color: white;
-    border-radius: 5px;
+.message-form input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #ff69b4;
+  border-radius: 5px;
+  width: 250px;
 }
 
-.whatsapp { background-color: #25D366; }
-.vk { background-color: #4C75A3; }
-.telegram { background-color: #0088cc; }
-.home-btn {
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
+.message-form button {
+  background-color: #ff69b4;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.message-form button:hover {
+  background-color: #e055a4;
 }
 
-main {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+/* Статус */
+#status {
+  margin-top: 1rem;
+  color: #aaa;
+  font-size: 0.9rem;
 }
 
-audio {
-    margin: 15px 0;
+/* Появляющийся текст */
+.floating-text {
+  position: absolute;
+  color: #ff69b4;
+  font-size: 1.5rem;
+  pointer-events: none;
+  animation: fadeOut 2s ease-out forwards;
 }
 
-footer {
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-    width: 100%;
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
 }

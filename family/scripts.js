@@ -49,7 +49,7 @@ document.addEventListener('click', (e) => {
 
 // ========== TELEGRAM REDIRECT ==========
 function redirectToTelegram() {
-  window.open("https://t.me/SemyonkaStarikov", "_blank"); // Заменить на свой username
+  window.open("https://t.me/SemkaplusVikabot", "_blank"); // Заменить на свой username
 }
 
 // ========== TELEGRAM BOT MESSAGE ==========

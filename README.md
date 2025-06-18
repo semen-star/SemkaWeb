@@ -45,7 +45,3 @@
 Если у вас есть вопросы или предложения, свяжитесь со мной:
 - Email: ss0215292@icloud.com
 - Социальные сети: [ВКонтакте](https://vk.com/semyonka_magnitka), [Telegram](https://t.me/SemyonkaStarikov)
-
----
-
-Спасибо за посещение моего сайта!

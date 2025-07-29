@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Кнопка "Да"
 const yesBtn = document.getElementById("yesBtn");
 yesBtn.addEventListener("click", () => {
-  alert("Ура! 📸 Ты теперь мой бессрочный фотограф!");
+  alert("Евгений, я в вас не сомневалась, мы же победа!");
 });
 
 // Кнопка "Нет" — прыгает

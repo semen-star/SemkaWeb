@@ -1,4 +1,3 @@
-/* Общие стили */
 body {
   margin: 0;
   padding: 0;
@@ -9,11 +8,11 @@ body {
   overflow-x: hidden;
 }
 
-/* Анимация появления */
+/* Анимация */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeIn 1s ease-out forwards;
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
 @keyframes fadeIn {
@@ -23,7 +22,7 @@ body {
   }
 }
 
-/* Угловые изображения */
+/* Углы */
 .corner {
   position: absolute;
   width: 100px;
@@ -46,39 +45,39 @@ body {
   right: 10px;
 }
 
-/* Основной контент */
+/* Контент */
 main {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 60px 20px 100px;
-  text-align: center;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }
 
-/* Центральное фото */
 .main-photo {
   width: 100%;
   max-width: 500px;
   height: auto;
   border-radius: 20px;
-  margin: 20px 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Вопрос и кнопки */
-.question-container {
-  margin-top: 30px;
+.block {
+  text-align: center;
 }
 
 .question-text {
   font-size: 1.3rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .buttons {
   display: flex;
-  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 button {
@@ -87,29 +86,25 @@ button {
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#yesBtn {
-  background-color: #81c784;
+  background-color: #64b5f6;
   color: white;
+  transition: background-color 0.3s ease;
 }
 
-#yesBtn:hover {
-  background-color: #66bb6a;
+button:hover {
+  background-color: #42a5f5;
 }
 
-#noBtn {
-  background-color: #e57373;
-  color: white;
-  position: relative;
+/* Сообщение при нажатии */
+button::after {
+  content: attr(data-response);
+  display: block;
+  font-size: 0.9rem;
+  color: #222;
+  margin-top: 10px;
 }
 
-#noBtn:hover {
-  background-color: #ef5350;
-}
-
-/* Адаптация под телефон */
+/* Адаптация */
 @media (max-width: 600px) {
   .corner {
     width: 70px;
@@ -121,11 +116,11 @@ button {
   }
 
   button {
-    padding: 10px 20px;
     font-size: 0.95rem;
+    padding: 10px 20px;
   }
 
   main {
-    padding: 40px 10px 80px;
+    padding: 60px 10px;
   }
 }

@@ -1,12 +1,9 @@
-// script.js
-document.addEventListener("DOMContentLoaded", () => {
-    document.body.style.opacity = "1";
-});
-
-// Добавление стиля для плавного появления
-document.documentElement.style.cssText = `
-    body {
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-    }
-`;
+// Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });

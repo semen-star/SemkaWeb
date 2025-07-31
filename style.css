@@ -1,94 +1,60 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    overflow-x: hidden;
-}
-
-.container {
-    text-align: center;
-    padding: 20px;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.welcome {
-    font-size: 1.5rem;
-    color: #333;
-}
-
-.quote {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin: 15px 0;
-    color: #555;
-}
-
-.photo-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding: 10px;
-}
-
-.photo-gallery img {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.photo-gallery img:hover {
-    transform: scale(1.1);
-}
-
-.blocks {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin: 20px 0;
-}
-
-.block {
-    background: rgba(173, 216, 230, 0.8);
-    border: 2px solid #87ceeb;
-    border-radius: 10px;
-    width: 200px;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.block:hover {
-    transform: translateY(-5px);
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.block .description {
-    font-size: 0.9rem;
-    margin-top: 5px;
-    text-align: center;
-    color: #555;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .profile-card {
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+        }
+        
+        .profile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
+        }
+        
+        .btn-social {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-social:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+        
+        .quote::before, .quote::after {
+            content: '"';
+            font-size: 1.5em;
+            color: #4b5563;
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #3b82f6;
+            white-space: nowrap;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #3b82f6; }
+        }

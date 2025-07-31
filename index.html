@@ -3,56 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Стариков Семённ</title>
+    <title>Стариков Семён | Главная</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <div class="container">
-        <h1>Добро пожаловать!</h1>
-        <p class="welcome">Привет! Я Семён, мне 18 лет. Увлечён программированием, играю на гитаре. В данный момент в поисках ВУЗа, куда можно поступить)</p>
-        <p class="quote">«Я воин и смогу отоспаться только после смерти»</p>
-
-        <div class="photo-gallery">
-            <img src="images/photo1.jpg" alt="Photo 1">
-            <img src="images/photo2.jpg" alt="Photo 2">
-            <img src="images/photo3.jpg" alt="Photo 3">
-            <img src="images/photo4.jpg" alt="Photo 4">
-            <img src="images/photo5.jpg" alt="Photo 5">
-            <img src="images/photo6.jpg" alt="Photo 6">
-            <img src="images/photo7.jpg" alt="Photo 7">
-            <img src="images/photo8.jpg" alt="Photo 8">
-        </div>
-
-        <div class="blocks">
-            <!-- <a href="other/guitar/index.html" class="block">Гитара(BETA)
-                <span class="description">Моя страсть к музыке и игре на гитаре.</span>
-            </a> -->
-            <a href="other/programming/index.html" class="block">Программирование(BETA)
-                <span class="description">Моё увлечение к написанию кода и созданию проектов.</span>
-            </a>
-            <a href="other/about/about.html" class="block">Личная жизнь
-                <span class="description">Немного о моих мыслях и интересах.</span>
-            </a>
-            <a href="other/contacts/contacts.html" class="block">Социальные сети и связь
-                <span class="description">Как со мной связаться и где меня найти в интернете.</span>
-            </a>
-
-          <!--   <a href="other/birthday/birthday.html" class="block">Подарки на ДР
-                <span class="description">Что можно подарить мне на др.</span>
-            </a> -->
-
-            <a href="other/music/music.html" class="block">Музыка(Beta)
-                <span class="description">Мои предпочтения в музыке.</span>
-            </a>
+<body class="antialiased text-gray-800">
+    <div class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Hero Section -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
+            <!-- Profile Card -->
+            <div class="profile-card w-full md:w-1/3 bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500">
+                <div class="relative">
+                    <img src="images/photo7.jpg" 
+                         alt="Семён Стариков" 
+                         class="w-full h-64 md:h-80 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h1 class="text-3xl font-bold text-white">Семён Стариков</h1>
+                        <!-- <p class="text-blue-200"></p> -->
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-center space-x-4 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">18 лет</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">Гитара</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Код</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Привет! Я Семён, мне 18 лет. Увлечён программированием, играю на гитаре. В данный момент в поисках ВУЗа, куда можно поступить)</p>
+                    <p class="quote italic text-gray-700 text-center py-2">Я воин и смогу отоспаться только после смерти</p>
+                </div>
+            </div>
             
+            <!-- Welcome Text -->
+            <div class="w-full md:w-2/3 bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 typewriter">Добро пожаловать на мой сайт!</h2>
+                <div class="space-y-4 text-gray-700">
+                    <p>Меня зовут <span class="font-semibold">Стариков Семён Михайлович</span>.</p>
+                    <p>Это мой личный сайт-портфолио, где я делюсь своими интересами, проектами и мыслями.</p>
+                    <p>В свободное время я занимаюсь программированием, изучаю новые технологии и играю на гитаре.</p>
+                    <p>Сейчас я нахожусь в процессе выбора университета для дальнейшего обучения.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <a href="other/programming/index.html" class="btn-social flex items-center justify-center px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                        <i class="fas fa-code mr-2"></i> Программирование (BETA)
+                    </a>
+                    <a href="other/about/about.html" class="btn-social flex items-center justify-center px-4 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
+                        <i class="fas fa-user mr-2"></i> Личная жизнь
+                    </a>
+                    <a href="other/contacts/contacts.html" class="btn-social flex items-center justify-center px-4 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700">
+                        <i class="fas fa-share-alt mr-2"></i> Соцсети и связь
+                    </a>
+                    <a href="other/music/music.html" class="btn-social flex items-center justify-center px-4 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700">
+                        <i class="fas fa-music mr-2"></i> Музыка (BETA)
+                    </a>
+                </div>
+            </div>
         </div>
-
+        
+        <!-- Photo Gallery -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Мои фото</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <!-- Replace with your actual photos -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/photo1.jpg" 
+                         alt="Фото 1" class="w-full h-48 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/photo2.jpg" 
+                         alt="Фото 2" class="w-full h-48 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/photo3.jpg" 
+                         alt="Фото 3" class="w-full h-48 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/photo4.jpg" 
+                         alt="Фото 4" class="w-full h-48 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/photo5.jpg" 
+                         alt="Фото 5" class="w-full h-48 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/photo6.jpg" 
+                         alt="Фото 6" class="w-full h-48 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/photo7.jpg" 
+                         alt="Фото 7" class="w-full h-48 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/photo8.jpg" 
+                         alt="Фото 8" class="w-full h-48 object-cover">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Social Media Section -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Свяжитесь со мной</h2>
+            <p class="text-center text-gray-600 mb-6">Вы можете найти меня в социальных сетях или написать мне напрямую</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://vk.com/semyonka_magnitka" class="btn-social flex items-center px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600">
+                    <i class="fab fa-vk mr-2"></i> ВКонтакте
+                </a>
+                <a href="https://github.com/semen-star" class="btn-social flex items-center px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-gray-900">
+                    <i class="fab fa-github mr-2"></i> GitHub
+                </a>
+                <a href="#" class="btn-social flex items-center px-6 py-3 bg-pink-600 text-white rounded-full hover:bg-pink-700">
+                    <i class="fab fa-instagram mr-2"></i> Instagram
+                </a>
+                <a href="https://t.me/SemyonkaStarikov" class="btn-social flex items-center px-6 py-3 bg-teal-500 text-white rounded-full hover:bg-teal-600">
+                    <i class="fab fa-telegram mr-2"></i> Telegram
+                </a>
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Все права защищены. </p>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">&copy; 2025 Стариков Семён Михайлович. Все права защищены.</p>
+            <p class="text-gray-400 text-sm">Это личный сайт. Я ничего не рекламирую и ничего не продаю.</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

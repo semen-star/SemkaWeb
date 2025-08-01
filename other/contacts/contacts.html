@@ -6,57 +6,119 @@
     <title>Семён: Контакты</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <header>
-        <button class="home-btn" onclick="window.history.back()">&#8962;</button>
-        <h1>Связаться со мной</h1>
+<body class="min-h-screen flex flex-col">
+    <header class="bg-indigo-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <button onclick="window.history.back()" class="back-btn bg-white text-indigo-600 rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h1 class="text-2xl md:text-3xl font-bold text-center">Связаться со мной</h1>
+                <div class="w-10"></div> <!-- Для выравнивания -->
+            </div>
+        </div>
     </header>
-    
-    <main>
-        <section class="social-links">
-            <button class="contact-btn whatsapp" onclick="window.location.href='https://wa.me/+79090954883'">WhatsApp</button>
-            <button class="contact-btn vk" onclick="window.location.href='https://vk.com/semyonka_magnitka'">ВКонтакте</button>
-            <button class="contact-btn telegram" onclick="window.location.href='https://t.me/SemyonkaStarikov'">Telegram</button>
-        </section>
-        
-        <section class="email-phones">
-            <h2>Email</h2>
-            <ul>
-                <li><a href="mailto:ss0215292@gmail.com">ss0215292@gmail.com</a></li>
-                <li><a href="mailto:ss0215292@icloud.com">ss0215292@icloud.com</a></li>
-                <li><a href="mailto:sema.starikov.07@mail.ru">sema.starikov.07@mail.ru</a></li>
-            </ul>
-            
-            <h2>Телефон</h2>
-            <p><a href="tel:+79090954883">+7 (909) 095-48-83</a></p>
-        </section>
 
-        <form id="tgForm">
-            <input type="text" placeholder="Напишите анонимное сообщение..." name="text" class="input">
-            <button class="button">
-                <svg viewBox="0 0 16 16" class="bi bi-lightning-charge-fill" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"></path>
-                </svg>
-                Отправить анонимное сообщение
-            </button>
-        </form>
-        
-        <script>
-            document.getElementById("tgForm").addEventListener("submit", function(e) {
-                e.preventDefault();
-                var msg = document.querySelector(".input").value;
-                fetch("https://script.google.com/macros/s/AKfycbzCFe9AU6VXx7uUkKh3qGwu9u7JFlZDBY2f9nng-0MgP4uUtPAGfAQRLo-B7Gi9xjmz/exec", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                    body: "text=" + encodeURIComponent(msg)
-                }).then(() => alert("Сообщение отправлено!"));
-            });
-        </script>
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="max-w-3xl mx-auto space-y-8">
+            <!-- Социальные сети -->
+            <section class="animate-fade-in delay-100">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Социальные сети</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <button onclick="window.location.href='https://wa.me/+79090954883'" class="contact-btn bg-green-500 hover:bg-green-600 text-white rounded-lg p-4 flex items-center justify-center space-x-2 shadow-md">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        <span>WhatsApp</span>
+                    </button>
+                    
+                    <button onclick="window.location.href='https://vk.com/semyonka_magnitka'" class="contact-btn bg-blue-500 hover:bg-blue-600 text-white rounded-lg p-4 flex items-center justify-center space-x-2 shadow-md">
+                        <i class="fab fa-vk text-2xl"></i>
+                        <span>ВКонтакте</span>
+                    </button>
+                    
+                    <button onclick="window.location.href='https://t.me/SemyonkaStarikov'" class="contact-btn bg-blue-400 hover:bg-blue-500 text-white rounded-lg p-4 flex items-center justify-center space-x-2 shadow-md">
+                        <i class="fab fa-telegram text-2xl"></i>
+                        <span>Telegram</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Контактная информация -->
+            <section class="animate-fade-in delay-200">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Контактная информация</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Email -->
+                    <div class="contact-card bg-white rounded-xl p-6 shadow-md border border-gray-100">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-indigo-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-gray-800">Email</h3>
+                        </div>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="mailto:ss0215292@gmail.com" class="flex items-center text-indigo-600 hover:text-indigo-800 transition-colors">
+                                    <i class="fas fa-at mr-2 text-gray-500"></i>
+                                    ss0215292@gmail.com
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:ss0215292@icloud.com" class="flex items-center text-indigo-600 hover:text-indigo-800 transition-colors">
+                                    <i class="fas fa-at mr-2 text-gray-500"></i>
+                                    ss0215292@icloud.com
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:sema.starikov.07@mail.ru" class="flex items-center text-indigo-600 hover:text-indigo-800 transition-colors">
+                                    <i class="fas fa-at mr-2 text-gray-500"></i>
+                                    sema.starikov.07@mail.ru
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Телефон -->
+                    <div class="contact-card bg-white rounded-xl p-6 shadow-md border border-gray-100">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-green-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-gray-800">Телефон</h3>
+                        </div>
+                        <div class="flex items-center">
+                            <a href="tel:+79090954883" class="text-indigo-600 hover:text-indigo-800 transition-colors flex items-center">
+                                <i class="fas fa-phone mr-2 text-gray-500"></i>
+                                +7 (909) 095-48-83
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Анонимное сообщение -->
+            <section class="animate-fade-in delay-300">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Анонимное сообщение</h2>
+                <form id="tgForm" class="bg-white rounded-xl p-6 shadow-md border border-gray-100">
+                    <div class="mb-4">
+                        <textarea name="text" placeholder="Напишите анонимное сообщение..." class="input-field w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-6 rounded-lg inline-flex items-center space-x-2 shadow-md w-full justify-center">
+                        <i class="fas fa-bolt"></i>
+                        <span>Отправить анонимное сообщение</span>
+                    </button>
+                </form>
+            </section>
+        </div>
     </main>
-    
-    <footer>
-        <p>&copy; 2025 Все права защищены</p>
+
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">&copy; 2025 Стариков Семён Михайлович. Все права защищены.</p>
+            <p class="text-gray-400 text-sm">Это личный сайт. </p>
+        </div>
     </footer>
 </body>
 </html>

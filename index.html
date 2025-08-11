@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Стариков Семён | Главная</title>
     <meta name="google-site-verification" content="u99M2pTBP-gaMbccsvB2QIIcMwQ1zSyii47BgsZe1gY" />
+
+    <meta name="description" content="Кто такой Стариков Семён. Чем он занимается, какие у него интересы">
+    <meta name="keywords" content=" Стариков Семён, Магнитогорск, Стариков Семён Михайлович">
+
+    <script>
+fetch('schema.jsonld')
+  .then(response => response.json())
+  .then(data => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(data);
+    document.head.appendChild(script);
+  })
+  .catch(console.error);
+</script>
+
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

@@ -4,22 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Стариков Семён | Главная</title>
+    <link rel="canonical" href="https://semen-star.github.io/SemkaWeb/">
     <meta name="google-site-verification" content="u99M2pTBP-gaMbccsvB2QIIcMwQ1zSyii47BgsZe1gY" />
 
     <meta name="description" content="Кто такой Стариков Семён. Чем он занимается, какие у него интересы">
-    <meta name="keywords" content=" Стариков Семён, Магнитогорск, Стариков Семён Михайлович">
+    <meta name="keywords" content="Стариков Семён, Магнитогорск, Стариков Семён Михайлович">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script>
-fetch('schema.jsonld')
-  .then(response => response.json())
-  .then(data => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(data);
-    document.head.appendChild(script);
-  })
-  .catch(console.error);
-</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "SemkaWeb",
+  "url": "https://semen-star.github.io/SemkaWeb/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://semen-star.github.io/SemkaWeb/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "hasPart": [
+    {
+      "@type": "WebPage",
+      "name": "Главная",
+      "url": "https://semen-star.github.io/SemkaWeb/index.html"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Про Стариков Семёна",
+      "url": "https://semen-star.github.io/SemkaWeb/other/about/about.html"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Контакты",
+      "url": "https://semen-star.github.io/SemkaWeb/other/contacts/contacts.html"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Музыка",
+      "url": "https://semen-star.github.io/SemkaWeb/other/music/music.html"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Программирование",
+      "url": "https://semen-star.github.io/SemkaWeb/other/programming/index.html"
+    }
+  ]
+}
+
+    </script>
 
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>

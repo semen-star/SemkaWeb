@@ -3,56 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семён: ДР</title>
-    <link rel="stylesheet" href="dr/style.css">
+        <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Подарки на ДР</title>
 </head>
 <body>
-    <header>
-        <h1>Что подарить на ДР?</h1>
-    </header>
-    
-    <main>
-        <h1>Лучший подарок - деньги</h1>
-        <button onclick="window.location.href='why.html'">Почему?</button>
-    <section class="category" id="fun">
-        <h2>Категории</h2>
-        <div class="products">
-
-            <div class="product">
-                <h3>Украшение комнаты</h3>
-                <p>Предметы, которые можно поставить в комнату, и будет красиво.</p>
-                <p><strong></strong></p>
-                
-                <button onclick="window.location.href='dr/krasota.html'">Перейти к категории</button>
-            </div>
-
-            <div class="product">
-                <h3>Веселье</h3>
-                <p>Всякая разная штука, которая нужна чисто для веселья.</p>
-                <p><strong></strong></p>
-                
-                <button onclick="window.location.href='dr/fun.html'">Перейти к категории</button>
-            </div>
-
-            <div class="product">
-                <h3>Польза</h3>
-                <p>Вещи, которые принесут мне пользу в реальной жизни.</p>
-                <p><strong></strong></p>
-                
-                <button onclick="window.location.href='dr/polza.html'">Перейти к категории</button>
-            </div>
-
-            <div class="product">
-                <h3>Мелочь</h3>
-                <p>Разная недорогая мелочёвка.</p>
-                <p><strong></strong></p>
-                
-                <button onclick="window.location.href='dr/other.html'">Перейти к категории</button>
-            </div>
+    <div class="container">
+        <div class="header">
+            <h1>🎁 Подарки на День Рождения</h1>
+            <p>Выбери что-то особенное из списка ниже</p>
         </div>
-    </section>
 
-</main>
+        <div class="categories">
+            <button class="category-btn active" data-category="all">Все подарки</button>
+            <button class="category-btn" data-category="useful">Полезное</button>
+            <button class="category-btn" data-category="fun">Весёлое</button>
+            <button class="category-btn" data-category="car">В машину</button>
+        </div>
 
+        <div class="gifts-grid">
+            <!-- Полезное -->
+            <div class="gift-card" data-category="useful">
+                <div class="gift-image">
+                    <img src="dr/1.jpg" alt="Умные очки Ray-Ban">
+                </div>
+                <div class="gift-title">Умные очки Ray-Ban</div>
+                <div class="gift-price">36376 ₽</div>
+                <a href="https://www.ozon.ru/product/umnye-ochki-ray-ban-skyler-linzy-clear-oprava-shiny-black-2275194052/?at=83tB4P26GI2KWYQjt9g4VMPTWxzJB0TLYBPRZU8J0GpJ" target="_blank" class="buy-btn">Купить на Ozon</a>
+            </div>
+
+           <div class="gift-card" data-category="useful">
+                <div class="gift-image">
+                    <img src="dr/nfc.jpg" alt="Умные очки Ray-Ban">
+                </div>
+                <div class="gift-title">Деревянная карта NFC</div>
+                <div class="gift-price">159 ₽</div>
+                <a href="https://www.ozon.ru/product/derevyannaya-karta-ntag213-perezapisyvaemaya-umnaya-vizitka-s-nfc-ntag213-1-shtuka-2509894998/" target="_blank" class="buy-btn">Купить на Ozon</a>
+            </div>
+
+            <div class="gift-card" data-category="fun">
+                <div class="gift-image">
+                    <img src="dr/ver.jpg" alt="Умные очки Ray-Ban">
+                </div>
+                <div class="gift-title">Фигурка Funko POP F1 Oracle RedBull Racing Max Verstappen</div>
+                <div class="gift-price">588 ₽</div>
+                <a href="https://www.ozon.ru/product/figurka-funko-pop-racing-f1-oracle-redbull-racing-max-verstappen-fanko-pop-v-vide-gonshchika-2997085311/" target="_blank" class="buy-btn">Купить на Ozon</a>
+            </div>
+
+            <div class="gift-card" data-category="car">
+                <div class="gift-image">
+                    <img src="dr/gas.jpg" alt="Умные очки Ray-Ban">
+                </div>
+                <div class="gift-title">Газовые упоры багажника LADA GRANTA</div>
+                <div class="gift-price">1850 ₽</div>
+                <a href="https://www.ozon.ru/product/gazovye-upory-bagazhnika-lada-granta-sedan-2011-nv-datsun-on-do-2014-2020-bez-sverleniya-komplekt-982633663/" target="_blank" class="buy-btn">Купить на Ozon</a>
+            </div>
+
+            <div class="gift-card" data-category="fun">
+                <div class="gift-image">
+                    <img src="dr/red.webp" alt="Описание">
+                </div>
+                <div class="gift-title">Куртка Red Bull</div>
+                <div class="gift-price">1432 ₽</div>
+                <a href="https://www.ozon.ru/product/kurtka-red-bull-kurtka-red-bull-kurtka-red-bull-bomber-red-bull-vetrovka-y2k-2021678248/?from_sku=2021695445&oos_search=false"  class="buy-btn">Купить на Ozon</a>
+            </div>
+
+            <div class="gift-card" data-category="car">
+                <div class="gift-image">
+                    <img src="dr/red2.webp" alt="Описание">
+                </div>
+                <div class="gift-title">Ароматизатор спрей RED BULL</div>
+                <div class="gift-price">447 ₽</div>
+                <a href="https://www.ozon.ru/product/aromatizator-sprey-red-bull-chistaya-energiya-30ml-1754796979/" target="_blank" class="buy-btn">Купить на Ozon</a>
+            </div>
+
+            <div class="gift-card" data-category="useful">
+                <div class="gift-image">
+                    <img src="dr/power.webp" alt="Описание">
+                </div>
+                <div class="gift-title">Mcdodo Внешний аккумулятор</div>
+                <div class="gift-price">2603 ₽</div>
+                <a href="https://www.ozon.ru/product/mcdodo-vneshniy-akkumulyator-mcdodo-mc-4651-10000-mach-20-vt-chernyy-svetlo-seryy-mc-4651-1947240696/" target="_blank" class="buy-btn">Купить на Ozon</a>
+            </div>
+
+            <div class="gift-card" data-category="fun">
+                <div class="gift-image">
+                    <img src="dr/red3.webp" alt="Описание">
+                </div>
+                <div class="gift-title">Бейсболка Red Bull Racing</div>
+                <div class="gift-price">598 ₽</div>
+                <a href="https://www.ozon.ru/product/beysbolka-1646326433/" target="_blank" class="buy-btn">Купить на Ozon</a>
+            </div>
+
+            <div class="gift-card" data-category="car">
+                <div class="gift-image">
+                    <img src="dr/oil.webp" alt="Описание">
+                </div>
+                <div class="gift-title">Ручка автомобильного масляного щупа</div>
+                <div class="gift-price">266 ₽</div>
+                <a href="https://www.ozon.ru/product/ruchka-avtomobilnogo-maslyanogo-shchupa-zamena-rukoyatki-modifikatsiya-ruchki-maslyanogo-supporta-1573563330/" target="_blank" class="buy-btn">Купить на Ozon</a>
+            </div>
+
+            <div class="gift-card" data-category="useful">
+                <div class="gift-image">
+                    <img src="dr/pla.webp" alt="Описание">
+                </div>
+                <div class="gift-title">люминесцентный PLA пластик</div>
+                <div class="gift-price">2237 ₽</div>
+                <a href="https://www.ozon.ru/product/dlya-3d-printerov-lyuminestsentnyy-fluorestsentnyy-raduzhnyy-mnogotsvetnyy-pla-shelk-1-75-mm-1-kg-1741473244/" target="_blank" class="buy-btn">Купить на Ozon</a>
+            </div>
+
+            <div class="gift-card" data-category="useful">
+                <div class="gift-image">
+                    <img src="dr/hub.webp" alt="Описание">
+                </div>
+                <div class="gift-title">Алюминиевый USB-концентратор 8-в-1</div>
+                <div class="gift-price">3963 ₽</div>
+                <a href="https://www.ozon.ru/product/alyuminievyy-usb-kontsentrator-8-v-1-s-ssd-korpusom-m-2-name-10-gbit-s-4k-hdmi-1-4-usb-3-2-gen2-pd-1590796832/" target="_blank" class="buy-btn">Купить на Ozon</a>
+            </div>
+
+            <div class="gift-card" data-category="useful">
+                <div class="gift-image">
+                    <img src="dr/hudi.webp" alt="Описание">
+                </div>
+                <div class="gift-title">Худи оверсайз меняющее цвет</div>
+                <div class="gift-price">4043 ₽</div>
+                <a href="https://www.wildberries.ru/catalog/429069100/detail.aspx?size=702214949" target="_blank" class="buy-btn">Купить на WB</a>
+            </div>
+
+            <div class="gift-card" data-category="useful">
+                <div class="gift-image">
+                    <img src="dr/fanera.webp" alt="Описание">
+                </div>
+                <div class="gift-title">Фанера для гравировки</div>
+                <div class="gift-price">236 ₽</div>
+                <a href="https://www.wildberries.ru/catalog/109825864/detail.aspx" target="_blank" class="buy-btn">Купить на WB</a>
+            </div>
+
+            <div class="gift-card" data-category="useful">
+                <div class="gift-image">
+                    <img src="dr/notepad.webp" alt="Описание">
+                </div>
+                <div class="gift-title">Набор из 10 наладонных блокнотов</div>
+                <div class="gift-price">344 ₽</div>
+                <a href="https://www.ozon.ru/product/nabor-iz-10-naladonnyh-bloknotov-ekopad-proshityh-na-nitku-tsvetnye-oblozhki-format-a-lya-smartfon-1045193662/" target="_blank" class="buy-btn">Купить на Ozon</a>
+            </div>
+
+            <div class="gift-card" data-category="useful">
+                <div class="gift-image">
+                    <img src="dr/co2.webp" alt="Описание">
+                </div>
+                <div class="gift-title">Набор одноразовых баллонов с газом СО2</div>
+                <div class="gift-price">343 ₽</div>
+                <a href="https://www.ozon.ru/product/nabor-odnorazovyh-ballonov-s-gazom-so2-oursson-os0110cp-ss-1713142954/" target="_blank" class="buy-btn">Купить на Ozon</a>
+            </div>
+
+            <div class="gift-card" data-category="useful">
+                <div class="gift-image">
+                    <img src="dr/cards.webp" alt="Описание">
+                </div>
+                <div class="gift-title">Карточки для гравировки крафт 100 штук</div>
+                <div class="gift-price">246 ₽</div>
+                <a href="https://www.ozon.ru/product/kartochki-dlya-zametok-i-zapisi-slov-kraft-100-shtuk-1126598249/" target="_blank" class="buy-btn">Купить на Ozon</a>
+            </div>
+
+            <div class="gift-card" data-category="useful">
+                <div class="gift-image">
+                    <img src="dr/mcards.webp" alt="Описание">
+                </div>
+                <div class="gift-title">Визитная карточка, листов: 50</div>
+                <div class="gift-price">443 ₽</div>
+                <a href="https://www.ozon.ru/product/sss-groupp-vizitnaya-kartochka-listov-50-1794956478/?reviewsVariantMode=2" target="_blank" class="buy-btn">Купить на Ozon</a>
+            </div>
+<!-- 
+            <div class="gift-card" data-category="useful">
+                <div class="gift-image">
+                    <img src="dr/1.webp" alt="Описание">
+                </div>
+                <div class="gift-title">Описание</div>
+                <div class="gift-price">Цена ₽</div>
+                <a href="Ссылка" target="_blank" class="buy-btn">Купить на Ozon</a>
+            </div> -->
+        </div>
+    </div>
 </body>
 </html>

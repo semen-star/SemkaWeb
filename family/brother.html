@@ -4,42 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Стариков Арсений Михайлович</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="components/contact-card.js"></script>
+    <script src="components/social-buttons.js"></script>
+    <script src="components/family-links.js"></script>
 </head>
-<body>
-    <header>
-        <h1>Стариков Арсений Михайлович</h1>
-    </header>
-    
-    <main>
-        <img src="./imgs/brother.jpg" alt="Photo 1">
-        <section class="social-links">
-            <button class="contact-btn vk" onclick="window.location.href='https://vk.com/id573348096'">ВКонтакте</button>
-            <button class="contact-btn telegram" onclick="window.location.href='https://t.me/Senya131313'">Telegram</button>
-        </section>
-        
-        <section class="email-phones">
-            <h2>Email</h2>
-            <ul>
-                <li><a href="mailto:ss0215292@gmail.com">ss2510152@gmail.com</a></li>
-            </ul>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-3xl">
+        <!-- Profile Card -->
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl mb-8">
+            <div class="relative h-48 bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center">
+                <div class="absolute -bottom-16 left-1/2 transform -translate-x-1/2">
+                    <div class="h-32 w-32 rounded-full border-4 border-white overflow-hidden shadow-lg">
+                        <img src="./imgs/brother.jpg" alt="Стариков Арсений" class="h-full w-full object-cover">
+                    </div>
+                </div>
+            </div>
             
-            <h2>Телефон</h2>
-            <p><a href="tel:+79821013554">+7 (982) 101-35-54</a></p>
-        </section>
-
-        <section class="family">
-            <h2>Семья</h2>
-            <button class="contact-btn telegram" onclick="window.location.href='mom.html'">Мама</button>
-            <button class="contact-btn telegram" onclick="window.location.href='dad.html'">Папа</button>
-            <button class="contact-btn telegram" onclick="window.location.href='sister.html'">сестра</button>
-            <button class="contact-btn telegram" onclick="window.location.href='https://semen-star.github.io/SemkaWeb/other/contacts/contacts.html'">Старший брат</button>
-        </section>
-    </main>
+            <div class="pt-20 pb-8 px-6 text-center">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">Стариков Арсений Михайлович</h1>
+                <p class="text-gray-600 mb-6">Если вы нашли мои вещи, пожалуйста, свяжитесь со мной</p>
+                
+                <!-- Contact Buttons -->
+                <social-buttons></social-buttons>
+                
+                <!-- Contact Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                    <contact-card icon="mail" title="Email">
+                        <a href="mailto:ss0215292@gmail.com" class="text-indigo-600 hover:text-indigo-800 transition-colors">ss2510152@gmail.com</a>
+                    </contact-card>
+                    
+                    <contact-card icon="phone" title="Телефон">
+                        <a href="tel:+79821013554" class="text-indigo-600 hover:text-indigo-800 transition-colors">+7 (982) 101-35-54</a>
+                    </contact-card>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Family Section -->
+        <div class="bg-white rounded-3xl shadow-xl p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Моя семья</h2>
+            <family-links></family-links>
+        </div>
+    </div>
     
-    <footer>
+    <footer class="text-center py-6 text-gray-500 text-sm">
         <p>&copy; 2025 Все права защищены</p>
     </footer>
+    
+    <script>
+        feather.replace();
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магический шар для гаданий</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Магический шар для гаданий</h1>
+            <p class="subtitle">Задайте вопрос и получите ответ от вселенной</p>
+        </header>
+        
+        <main>
+            <div class="magic-ball-container">
+                <div class="magic-ball" id="magicBall">
+                    <div class="magic-ball-inner">
+                        <div class="magic-ball-window">
+                            <div class="answer-text" id="answerText"></div>
+                        </div>
+                    </div>
+                    <div class="magic-ball-base"></div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button class="ask-button" id="askButton">
+                    <span class="button-text">Задать вопрос</span>
+                    <span class="button-icon">🔮</span>
+                </button>
+                <p class="instructions">Сосредоточьтесь на вопросе и нажмите кнопку</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2023 Магический шар предсказаний. Только для развлечения.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

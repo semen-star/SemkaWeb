@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://semen-star.github.io/SemkaWeb/sitemap.xml

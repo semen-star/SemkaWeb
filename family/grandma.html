@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Андреева Людмила Борисовна</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .family-link {
+            transition: all 0.2s ease;
+        }
+        .family-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+        }
+        /* для временного Telegram плейсхолдера */
+        .tg-placeholder {
+            opacity: 0.8;
+            cursor: default;
+        }
+        .vk-icon-fallback {
+            display: inline-block;
+            background-color: #4c75a3;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M22 12c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2s10 4.48 10 10zm-2.5 0c0-4.14-3.36-7.5-7.5-7.5S4.5 7.86 4.5 12s3.36 7.5 7.5 7.5 7.5-3.36 7.5-7.5zm-3.5 0c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4z'/%3E%3C/svg%3E") no-repeat center;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M22 12c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2s10 4.48 10 10zm-2.5 0c0-4.14-3.36-7.5-7.5-7.5S4.5 7.86 4.5 12s3.36 7.5 7.5 7.5 7.5-3.36 7.5-7.5zm-3.5 0c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4z'/%3E%3C/svg%3E") no-repeat center;
+            mask-size: contain;
+            -webkit-mask-size: contain;
+            width: 1.2em;
+            height: 1.2em;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen antialiased">
+    <div class="container mx-auto px-4 py-8 max-w-3xl">
+        <!-- Главная карточка -->
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl mb-8">
+            <!-- Верхний цветной блок с фото (временное, потом заменить) -->
+            <div class="relative h-48 bg-gradient-to-r from-blue-600 to-indigo-700 flex items-center justify-center">
+                <div class="absolute -bottom-16 left-1/2 transform -translate-x-1/2">
+                    <div class="h-32 w-32 rounded-full border-4 border-white overflow-hidden shadow-lg bg-white">
+                        <!-- Пока заглушка, позже вставить фото Людмилы Борисовны -->
+                        <img src="imgs/grand.jpg"
+                             alt="Людмила Борисовна" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-20 pb-8 px-6 text-center">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">Андреева Людмила Борисовна</h1>
+                <p class="text-gray-600 mb-6">Если вы нашли мои вещи, пожалуйста, свяжитесь со мной</p>
+                
+                <!-- Кнопки соцсетей -->
+                <div class="flex justify-center space-x-4 mb-4">
+                    <!-- VK (рабочая ссылка, иконка через data-feather больше не используется, вставляем вручную) -->
+                    <a href="https://vk.com/id216100377" target="_blank" rel="noopener noreferrer" 
+                       class="bg-[#4c75a3] text-white p-3 rounded-full hover:bg-[#3a5f8a] transition shadow-md hover:shadow-lg flex items-center justify-center w-12 h-12">
+                        <!-- вручную svg иконка VK -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+                            <path d="M22 12c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2s10 4.48 10 10zm-2.5 0c0-4.14-3.36-7.5-7.5-7.5S4.5 7.86 4.5 12s3.36 7.5 7.5 7.5 7.5-3.36 7.5-7.5zm-3.5 0c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4z"/>
+                        </svg>
+                    </a>
+                    <!-- Telegram (плейсхолдер, ссылка будет позже) -->
+                    <span class="tg-placeholder bg-sky-400 text-white p-3 rounded-full shadow-md flex items-center justify-center w-12 h-12 cursor-not-allowed">
+                        <i data-feather="send" class="w-5 h-5"></i>
+                    </span>
+                    <!-- Email -->
+                    <a href="mailto:ss2510152@gmail.com" 
+                       class="bg-gray-600 text-white p-3 rounded-full hover:bg-gray-700 transition shadow-md flex items-center justify-center w-12 h-12">
+                        <i data-feather="mail" class="w-5 h-5"></i>
+                    </a>
+                    <!-- Телефон основной -->
+                    <a href="tel:+79089390471" 
+                       class="bg-green-600 text-white p-3 rounded-full hover:bg-green-700 transition shadow-md flex items-center justify-center w-12 h-12">
+                        <i data-feather="phone" class="w-5 h-5"></i>
+                    </a>
+                </div>
+                <p class="text-xs text-gray-400 mb-6">✎ Telegram появится позже</p>
+                
+                <!-- Контактные карточки (только самой Людмилы) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                    <!-- Телефон Людмилы -->
+                    <div class="bg-gray-50 rounded-xl p-4 border border-gray-100 flex items-start space-x-3">
+                        <i data-feather="phone" class="text-indigo-600 w-5 h-5 mt-0.5"></i>
+                        <div class="text-left">
+                            <p class="text-sm text-gray-500">Телефон</p>
+                            <a href="tel:+79089390471" class="text-indigo-700 hover:text-indigo-900 font-medium">
+                                +7 (908) 939-04-71
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Раздел МОЯ СЕМЬЯ (только здесь упоминания дочери и внука) -->
+        <div class="bg-white rounded-3xl shadow-xl p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">👨‍👩‍👧 Моя семья</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Дочь: Татьяна -->
+                <div class="family-link bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-4 border border-purple-100 flex items-center space-x-4">
+                    <div class="bg-purple-200 rounded-full p-3">
+                        <i data-feather="heart" class="text-purple-700 w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-purple-800">Дочь</p>
+                        <p class="text-gray-700 font-semibold">Татьяна Старикова</p>
+                        <a href="tel:+79090954887" class="text-sm text-indigo-600 hover:text-indigo-800">+7 (909) 095-48-87</a>
+                    </div>
+                </div>
+                
+                <!-- Внук: Семён (без указания профессии, просто внук) -->
+                <div class="family-link bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-100 flex items-center space-x-4">
+                    <div class="bg-blue-200 rounded-full p-3">
+                        <i data-feather="user" class="text-blue-700 w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-blue-800">Внук</p>
+                        <p class="text-gray-700 font-semibold">Семён Стариков</p>
+                        <a href="https://semkastarik.ru" target="_blank" class="text-sm text-indigo-600 hover:text-indigo-800 break-all">semkastarik.ru</a>
+                    </div>
+                </div>
+                
+                <!-- Можно добавить ещё кого-то, но оставим так -->
+            </div>
+            <!-- Небольшой комментарий про фото (если нужно сменить) — но без упоминания имён -->
+            <p class="text-xs text-center text-gray-400 mt-6">Фото профиля будет заменено на портрет Людмилы Борисовны</p>
+        </div>
+    </div>
+    
+    <footer class="text-center py-6 text-gray-500 text-sm">
+        <p>© 2026 Людмила Борисовна</p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Инициализируем feather icons для всех обычных иконок
+            feather.replace({ width: '1.2em', height: '1.2em' });
+            
+            // Для Telegram placeholder убираем стандартное поведение
+            const tg = document.querySelector('.tg-placeholder');
+            if (tg) {
+                tg.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    alert('Ссылка на Telegram появится позже');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

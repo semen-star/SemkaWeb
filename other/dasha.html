@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Оценка ёбнутости :: Рандомайзер</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            user-select: none; /* легкий акцент, чтобы текст кнопки не выделялся */
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            padding: 1.5rem;
+        }
+
+        /* Карточка-контейнер */
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(2px);
+            border-radius: 3.5rem;
+            padding: 2rem 2rem 2.5rem;
+            width: 100%;
+            max-width: 550px;
+            text-align: center;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+            transition: all 0.2s ease;
+        }
+
+        /* Заголовок-прикол */
+        .title {
+            font-size: 1.9rem;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+            background: linear-gradient(135deg, #FFE6F0, #FFB3C6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            margin-bottom: 0.5rem;
+        }
+
+        .sub {
+            color: #b8c1ec;
+            font-weight: 400;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            opacity: 0.85;
+            border-bottom: 1px dashed rgba(255,255,255,0.2);
+            display: inline-block;
+            padding-bottom: 0.4rem;
+        }
+
+        /* Кнопка безумия */
+        .madness-btn {
+            background: radial-gradient(circle at 30% 10%, #ff4d6d, #c9184a);
+            border: none;
+            padding: 1.2rem 2rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 100px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto 2rem auto;
+            display: block;
+            transition: transform 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1), box-shadow 0.2s;
+            box-shadow: 0 12px 0 #800f2f, 0 5px 20px rgba(0, 0, 0, 0.3);
+            font-family: inherit;
+        }
+
+        .madness-btn:active {
+            transform: translateY(4px);
+            box-shadow: 0 6px 0 #800f2f, 0 8px 18px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Результат */
+        .result-box {
+            background: #0f0f1a;
+            border-radius: 2.5rem;
+            padding: 1.6rem 1rem;
+            margin-top: 0.5rem;
+            border: 1px solid rgba(255, 95, 135, 0.5);
+            background: linear-gradient(145deg, #0a0a12, #12121c);
+            transition: all 0.25s;
+        }
+
+        .rating-number {
+            font-size: 4.5rem;
+            font-weight: 800;
+            font-family: monospace, 'Fira Mono', 'Courier New', monospace;
+            letter-spacing: 4px;
+            background: linear-gradient(135deg, #FFB347, #FF6B6B);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 12px rgba(255, 100, 100, 0.4);
+            line-height: 1;
+        }
+
+        .rating-caption {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #ffb7c5;
+            margin-top: 0.5rem;
+            letter-spacing: -0.3px;
+        }
+
+        .rating-caption span {
+            font-size: 2rem;
+            font-weight: 800;
+            background: none;
+            color: #ff9fae;
+        }
+
+        .extra-info {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: #aaa9ce;
+            background: rgba(255,255,240,0.05);
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 60px;
+            backdrop-filter: blur(2px);
+        }
+
+        .shake-animation {
+            animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+        }
+
+        @keyframes shake {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            20% { transform: translate(-4px, 2px) rotate(-1deg); }
+            40% { transform: translate(4px, -2px) rotate(1deg); }
+            60% { transform: translate(-2px, 1px) rotate(0deg); }
+            80% { transform: translate(2px, -1px) rotate(0deg); }
+            100% { transform: translate(0, 0) rotate(0); }
+        }
+
+        .glow {
+            animation: glowPulse 0.4s ease-out;
+        }
+
+        @keyframes glowPulse {
+            0% { text-shadow: 0 0 0px rgba(255, 80, 120, 0); }
+            30% { text-shadow: 0 0 12px #ff4d6d, 0 0 20px #ff1e4d; }
+            100% { text-shadow: 0 0 0px rgba(255, 80, 120, 0); }
+        }
+
+        footer {
+            font-size: 0.7rem;
+            margin-top: 1.5rem;
+            color: #5d5b8a;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 1.5rem 1.2rem;
+            }
+            .rating-number {
+                font-size: 3.2rem;
+            }
+            .rating-caption {
+                font-size: 1.3rem;
+            }
+            .madness-btn {
+                font-size: 1.2rem;
+                padding: 1rem 1rem;
+            }
+            .title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="title">
+        🤪 Шкала безумия 🤯
+    </div>
+    <div class="sub">
+        нажми — и узнаешь правду (или ложь)
+    </div>
+
+    <button class="madness-btn" id="crazyButton">
+        🔥 оценить насколько я ёбнутая 🔥
+    </button>
+
+    <div class="result-box" id="resultBox">
+        <div class="rating-number" id="ratingValue">–––</div>
+        <div class="rating-caption" id="ratingCaption">
+            <span id="fractionDisplay">––/10</span>
+        </div>
+        <div class="extra-info" id="extraMsg">
+            жми на кнопку, жри случайность
+        </div>
+    </div>
+    <footer>
+        🧠 статистическая погрешность: ± безумие
+    </footer>
+</div>
+
+<script>
+    (function() {
+        // Элементы DOM
+        const button = document.getElementById('crazyButton');
+        const ratingValueSpan = document.getElementById('ratingValue');
+        const fractionSpan = document.getElementById('fractionDisplay');
+        const extraMsgDiv = document.getElementById('extraMsg');
+        const resultBox = document.getElementById('resultBox');
+
+        // Функция генерации случайного числа от 100 до 1000 включительно
+        function getRandomCrazyScore() {
+            // Math.random() возвращает [0,1)
+            // Минимум 100, максимум 1000 включительно: (max - min + 1)
+            const min = 100;
+            const max = 1000;
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        // Массив эпичных комментариев в зависимости от значения (по желанию)
+        function getCrazyCommentary(score) {
+            if (score >= 900) return "💀 абсолютный угар 💀";
+            if (score >= 700) return "⚡ опасная зона ⚡";
+            if (score >= 500) return "🌀 уверенный полёт 🌀";
+            if (score >= 300) return "🌪️ легкое помешательство 🌪️";
+            return "✨ едва заметная искра ✨";
+        }
+
+        // Функция обновления интерфейса
+        function updateResult(randomNumber) {
+            // отображаем целое число от 100 до 1000
+            ratingValueSpan.textContent = randomNumber;
+            // формируем строку вида "число/10" (требование: число/10)
+            // но по заданию: 'число/10' — выводим как "567/10" прямо на странице.
+            // дополнительно сделаем читабельно: число + '/10'
+            const fractionText = `${randomNumber}/10`;
+            fractionSpan.textContent = fractionText;
+
+            // добавим маленькое описание
+            const comment = getCrazyCommentary(randomNumber);
+            extraMsgDiv.innerHTML = `🧨 ${comment} 🧨 · ${randomNumber} баллов из 10 · 🎲`;
+            
+            // визуальные эффекты: тряска и свечение
+            resultBox.classList.add('shake-animation');
+            ratingValueSpan.classList.add('glow');
+            fractionSpan.classList.add('glow');
+            
+            // удаляем классы через таймаут, чтобы анимация не висела
+            setTimeout(() => {
+                resultBox.classList.remove('shake-animation');
+                ratingValueSpan.classList.remove('glow');
+                fractionSpan.classList.remove('glow');
+            }, 500);
+        }
+
+        // Обработчик клика
+        function handleClick() {
+            // генерируем рандомное число
+            const crazyScore = getRandomCrazyScore();
+            // обновляем UI
+            updateResult(crazyScore);
+            // маленькая вибрация если поддерживается (опционально, весело)
+            if (window.navigator && window.navigator.vibrate) {
+                window.navigator.vibrate(50);
+            }
+            // дополнительная интерактивность: легкий клик по кнопке уже даёт эффект нажатия
+            // также добавим "психоделический" звук? нет, чтобы не нарушать авто-политику, не будем
+        }
+
+        // Навешиваем событие
+        button.addEventListener('click', handleClick);
+
+        // Можно добавить начальное случайное значение при загрузке страницы (но не обязательно, но прикольно)
+        // Чтобы сразу не было пусто "–––" — покажем приветственное число?
+        // Сделаем демо-заполнение при первом запуске без клика (опционально)
+        // Создаём "предзагрузочный" приветственный рандом, но не навязчиво
+        // Однако по заданию после нажатия — рандом, но пустой блок некрасив. Покажем нейтральный вариант.
+        // Но для веселья инициализируем числом 500/10? Не противоречит логике, просто первая загрузка.
+        // Но лучше чтобы соответствовало "после нажатия показывается", но начальное состояние можно сделать заглушкой.
+        // Пусть будет нейтральное сообщение: "жду клика" но число 0/10 не подходит, сделаем "❓/10"
+        ratingValueSpan.textContent = "???";
+        fractionSpan.textContent = "❓/10";
+        extraMsgDiv.innerHTML = "нажми кнопку — получишь диагноз 🧪";
+        
+        // добавим также что при клике будет рандомное число, всё строго
+        // для чистоты кода: в функции handleClick генерируем 100-1000 и отображаем "число/10"
+        // Всё по заданию: "показывается рандомное число от 100 до 1000 и написано 'число/10'"
+    })();
+</script>
+</body>
+</html>
